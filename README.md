@@ -5,7 +5,7 @@ This Streamlit application uses Google's Gemini Pro model to reconstruct metabol
 ## Features
 
 -   **PDF Analysis**: Upload multiple scientific papers (PDFs).
--   **AI Reconstruction**: Uses Gemini 1.5 Pro to extract structured metabolic data.
+-   **AI Reconstruction**: Uses Gemini 3 Pro to extract structured metabolic data.
 -   **Interactive Visualization**: Generates a bipartite graph (Substrate -> Reaction -> Product) of the pathway.
 -   **Unified Viewer**: Split-screen view linking extracted data directly to evidence in the PDF.
 -   **High-Quality Exports**: Download the pathway graph as High-Res PNG or SVG.

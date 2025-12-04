@@ -16,7 +16,11 @@ load_dotenv()
 
 # Initialize Gemini Client
 try:
-    client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
+    api_key = os.environ.get("GOOGLE_API_KEY")
+    # Docker might pass quotes literally from .env, so we strip them
+    if api_key:
+        api_key = api_key.strip().strip("'").strip('"')
+    client = genai.Client(api_key=api_key)
 except Exception as e:
     st.error(f"Error initializing Gemini Client: {e}. Make sure GOOGLE_API_KEY is in your .env file.")
     st.stop()
